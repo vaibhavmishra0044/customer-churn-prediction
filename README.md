@@ -1,66 +1,69 @@
-# 🔮 Customer Churn Prediction
+# Customer Churn Prediction | Telecom Analytics
 
-An end-to-end machine learning project that predicts whether a telecom customer will churn using Python, Scikit-learn, and XGBoost. Built with real-world data and deployed as an interactive web application.
+**Business analytics • Customer retention • Predictive modeling**
 
----
+An end-to-end analytics and machine learning project exploring why telecom customers leave and how businesses can identify customers at risk of churn.
 
-## 📌 Problem Statement
+## Project at a glance
 
-Customer churn is one of the biggest challenges in the telecom industry. Acquiring a new customer costs 5-7x more than retaining an existing one. This project builds a machine learning model that identifies at-risk customers before they leave, enabling businesses to take proactive retention actions.
+| Dataset | Target | Best reported model | Reported ROC-AUC |
+| --- | --- | --- | --- |
+| 7,043 customers, 21 columns | Churn (Yes/No) | Random Forest | 91.94% |
 
----
+## Business objective
 
-## 📊 Dataset
+Identify customer segments with elevated churn, compare classification models, and translate analytical findings into actionable retention strategies.
 
-- **Source:** Telco Customer Churn Dataset (Kaggle)
-- **Size:** 7,043 customers | 21 features
-- **Target Variable:** Churn (Yes/No)
+## Dataset and analytical approach
 
----
+- Source: Telco Customer Churn dataset (Kaggle).
+- Explore customer demographics, tenure, contract types, services, charges and payment methods.
+- Compare churn rates across customer segments.
+- Compare Logistic Regression, Random Forest and XGBoost using accuracy and ROC-AUC.
+- Translate findings into retention recommendations and support interactive prediction with Streamlit.
 
-## 🔍 Key Findings
+## Key findings and business recommendations
 
-| Insight | Finding |
-|---|---|
-| Month-to-month contracts | 42.7% churn rate vs 2.8% for two-year contracts |
-| New customers (0-12 months) | Highest churn rate of 47.7% |
-| Fiber optic customers | Churn more despite premium service |
-| Electronic check users | Highest churn rate among payment methods |
-| Senior citizens | Churn at 41.7% vs 23.6% for non-seniors |
+| Reported finding | Recommended action |
+| --- | --- |
+| Month-to-month contracts: 42.7% churn vs 2.8% for two-year contracts | Test incentives for longer contracts. |
+| Customers with 0–12 months of tenure: 47.7% churn | Strengthen onboarding and early customer engagement. |
+| Higher churn among fiber optic customers | Investigate pricing, service quality and customer feedback. |
+| Electronic check users show elevated churn | Test convenient alternative payment options. |
+| Senior citizens: 41.7% churn vs 23.6% for other customers | Investigate accessibility and support needs. |
 
----
+These are observed associations, not proof of causation. Proposed interventions should be tested before rollout.
 
-## 🤖 Model Results
+## Model comparison
 
-| Model | Accuracy | ROC-AUC |
-|---|---|---|
+| Model | Reported accuracy | Reported ROC-AUC |
+| --- | ---: | ---: |
 | Logistic Regression | 79.32% | 88.18% |
 | Random Forest | **84.49%** | **91.94%** |
 | XGBoost | 82.71% | 90.59% |
 
-**Best Model: Random Forest with 91.94% ROC-AUC Score**
+Figures are retained from the original project documentation; they have not been independently reproduced in this README update. Before operational use, validate the split methodology, leakage controls, precision, recall and probability calibration.
 
----
+## Technology stack
 
-## 💼 Business Recommendations
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, SHAP and Streamlit.
 
-1. **Target month-to-month customers** — Offer discounts to switch to annual plans
-2. **Focus on new customers (0-12 months)** — Implement strong onboarding program
-3. **Address fiber optic dissatisfaction** — Investigate service quality and pricing
-4. **Convert electronic check users** — Incentivize automatic payment methods
-5. **Senior citizen retention program** — Create dedicated support and special pricing
+## Getting started
 
----
+```bash
+git clone https://github.com/vaibhavmishra0044/customer-churn-prediction.git
+cd customer-churn-prediction
+python -m pip install -r requirements.txt
+```
 
-## 🛠️ Tech Stack
+Explore the [repository files](https://github.com/vaibhavmishra0044/customer-churn-prediction/tree/main) for the analysis and application assets.
 
-- **Languages:** Python
-- **ML Libraries:** Scikit-learn, XGBoost, SHAP
-- **Data Analysis:** Pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn
-- **Web App:** Streamlit
-- **Version Control:** Git, GitHub
+## Next steps
 
----
+- Validate performance on an untouched test set.
+- Evaluate retention campaign costs and expected benefits.
+- Monitor model performance and customer behavior over time.
 
-## 📁 Project Structure
+## Author
+
+[Vaibhav Mishra](https://github.com/vaibhavmishra0044) | [LinkedIn](https://linkedin.com/in/vaibhav-mishra04)
